@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAO INVESTMENT AUSTRALIA PTY LTD | Performance Paid Media & Lead Generation NSW</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0F172A',
+                            800: '#1E293B',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Subtle highlight for editable placeholder tags so the owner can easily spot them */
+        .placeholder-tag {
+            background-color: rgba(245, 158, 11, 0.14);
+            border-bottom: 1.5px dashed #d97706;
+            padding: 0 4px;
+            border-radius: 3px;
+            color: inherit;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-navy-900 selection:text-white">
+
+    <!-- Top Corporate Trust Bar -->
+    <div class="bg-navy-900 text-slate-300 text-xs py-2 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span data-i18n="topLocation">Lindfield, NSW Based Performance Agency</span>
+                </span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:inline">ABN / ACN: <span class="placeholder-tag">[Your ABN / ACN]</span></span>
+            </div>
+            <div class="flex items-center space-x-5">
+                <a href="mailto:info@caoinvestau.com" class="hover:text-white transition">
+                    info@caoinvestau.com
+                </a>
+                <a href="tel:+61200000000" class="hover:text-white transition font-medium text-white">
+                    <span class="placeholder-tag">[+61 2 XXXX XXXX]</span>
+                </a>
+                <button id="lang-toggle" type="button" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-slate-700 text-[11px] font-semibold transition">
+                    中文 / EN
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-white font-display font-bold text-xl tracking-tight shadow-sm">
+                        C
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-base sm:text-lg text-navy-900 tracking-tight block leading-none">
+                            CAO INVESTMENT AUSTRALIA
+                        </span>
+                        <span class="text-[11px] font-medium text-slate-500 tracking-wider uppercase mt-1 block">
+                            Paid Media & Lead Generation
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#services" class="hover:text-navy-900 transition" data-i18n="navServices">Services</a>
+                    <a href="#fee-model" class="hover:text-navy-900 transition" data-i18n="navFee">Management Model</a>
+                    <a href="#process" class="hover:text-navy-900 transition" data-i18n="navProcess">Tracking & ROI</a>
+                    <a href="#about" class="hover:text-navy-900 transition" data-i18n="navAbout">About Us</a>
+                </nav>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-3">
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-navy-900 text-white text-sm font-semibold hover:bg-navy-800 transition shadow-sm" data-i18n="navCta">
+                        Request Consultation
+                    </a>
+                    <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Open menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2">
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50" data-i18n="navServices">Services</a>
+            <a href="#fee-model" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50" data-i18n="navFee">Management Model</a>
+            <a href="#process" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50" data-i18n="navProcess">Tracking & ROI</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50" data-i18n="navAbout">About Us</a>
+            <a href="#contact" class="block mt-3 text-center px-4 py-2.5 rounded-lg bg-navy-900 text-white text-sm font-semibold" data-i18n="navCta">
+                Request Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-navy-900 text-white overflow-hidden">
+        <!-- Subtle architectural grid background -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#94a3b8 1px, transparent 1px); background-size: 28px 28px;"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-medium text-emerald-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-i18n="heroBadge">Google Ads & Meta Paid Media Specialists • New South Wales</span>
+                    </div>
+
+                    <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15]" data-i18n="heroTitle">
+                        High-Intent Paid Advertising for Australian Service, Repair & Installation Brands.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl" data-i18n="heroDesc">
+                        We manage end-to-end Google and Meta advertising campaigns—combining targeted acquisition strategy, continuous bid optimisation, and granular lead tracking to generate qualified repair, installation, and quote enquiries.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition shadow-lg shadow-emerald-950/50">
+                            <span data-i18n="heroBtnPrimary">Book a Discovery Call</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#fee-model" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition" data-i18n="heroBtnSecondary">
+                            View Transparent Fee Model
+                        </a>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-800 grid grid-cols-3 gap-4 text-left">
+                        <div>
+                            <p class="text-xl sm:text-2xl font-display font-bold text-white">100%</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Direct Client Ad Ownership</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-display font-bold text-white">GA4 + Call</p>
+                            <p class="text-xs text-slate-400 mt-0.5">End-to-End Lead Attribution</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-display font-bold text-white">Monthly</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Fixed Retainer Structure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Executive Summary Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Campaign Performance Framework</span>
+                            <span class="px-2.5 py-0.5 rounded text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active Standard</span>
+                        </div>
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-md bg-navy-900 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">1</div>
+                                <div>
+                                    <p class="font-semibold text-white">Search & Social Acquisition</p>
+                                    <p class="text-slate-400 text-xs mt-0.5">High-intent Google Search & Meta lead generation tailored to local NSW & national service zones.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-md bg-navy-900 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">2</div>
+                                <div>
+                                    <p class="font-semibold text-white">Quote & Call Conversion Tracking</p>
+                                    <p class="text-slate-400 text-xs mt-0.5">Verified tracking of inbound phone calls, quote forms, and booking requests.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-md bg-navy-900 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">3</div>
+                                <div>
+                                    <p class="font-semibold text-white">Direct Media Spend Transparency</p>
+                                    <p class="text-slate-400 text-xs mt-0.5">Clients pay ad budgets directly to Google & Meta; we charge a clear monthly management fee.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-5 border-t border-slate-700 flex items-center justify-between text-xs text-slate-400">
+                            <span>Compliant with Australian Consumer Law</span>
+                            <span class="text-slate-300 font-medium">Lindfield, NSW 2070</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">Core Capabilities</span>
+                <h2 class="mt-2 font-display text-2xl sm:text-3xl font-bold text-navy-900" data-i18n="servicesTitle">
+                    Structured Paid Media Management Built for Measurable Enquiries
+                </h2>
+                <p class="mt-3 text-slate-600 text-base leading-relaxed" data-i18n="servicesDesc">
+                    We focus exclusively on performance channels that drive commercial enquiries—helping repair, installation, and trade service businesses turn ad spend into booked jobs.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-navy-900/30 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-lg bg-navy-900 text-white flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Google Search & Local Ads</h3>
+                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+                            Capturing high-intent local searches from customers actively seeking urgent repairs, installations, and service quotes across targeted postcodes.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        Keyword Intent • Negative Filtering • Bid Control
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-navy-900/30 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-lg bg-navy-900 text-white flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Meta Paid Social Campaigns</h3>
+                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+                            Targeted Facebook and Instagram lead generation campaigns designed to generate steady quote requests and seasonal installation bookings.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        Instant Lead Forms • Retargeting • Creative Testing
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-navy-900/30 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-lg bg-navy-900 text-white flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Lead & Call Attribution</h3>
+                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+                            Full implementation of Google Tag Manager, GA4 conversion events, and inbound call tracking so every enquiry is traced back to its exact campaign.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        GA4 • GTM • Call & Form Tracking
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-navy-900/30 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-11 h-11 rounded-lg bg-navy-900 text-white flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-navy-900">Performance Reporting</h3>
+                        <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+                            Clear monthly performance breakdowns detailing ad spend, cost-per-lead (CPL), enquiry volume, and ongoing optimisation actions.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        CPL Transparency • Monthly Review • Audit Trail
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparent Commercial & Fee Model Section -->
+    <section id="fee-model" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">Commercial Structure</span>
+                <h2 class="mt-2 font-display text-2xl sm:text-3xl font-bold text-navy-900">
+                    Transparent Billing & Account Ownership Model
+                </h2>
+                <p class="mt-3 text-slate-600 text-base">
+                    We separate media spend from agency management fees—ensuring complete financial clarity, direct platform billing, and zero hidden markups.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Pillar 1: Direct Ad Spend -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-slate-100 text-navy-900 text-xs font-bold uppercase tracking-wide">Component 01</span>
+                            <span class="text-sm font-semibold text-slate-500">Paid Directly to Platforms</span>
+                        </div>
+                        <h3 class="mt-5 font-display text-xl font-bold text-navy-900">
+                            Client-Owned Media Budget (Google & Meta)
+                        </h3>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                            Your advertising budget is billed directly by Google Ads and Meta to your nominated business payment method. You retain 100% administrative ownership of your ad accounts, historical data, and conversion pixels at all times.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Direct tax invoices issued by Google Australia / Meta</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Flexible daily & monthly spend caps approved by you</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Full account ownership retained by the client</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 text-xs text-slate-500">
+                        Zero commission markup on platform media spend.
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Monthly Management Fee -->
+                <div class="bg-navy-900 text-white rounded-2xl p-8 border border-navy-800 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wide">Component 02</span>
+                            <span class="text-sm font-semibold text-slate-300">Monthly Retainer Invoice</span>
+                        </div>
+                        <h3 class="mt-5 font-display text-xl font-bold text-white">
+                            Dedicated Monthly Advertising Management Fee
+                        </h3>
+                        <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                            We charge a predictable monthly management fee outlined in a clear Fee Schedule—covering campaign architecture, weekly search-term & audience optimisation, conversion tracking maintenance, and monthly reporting.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Campaign strategy, keyword research & ad copywriting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Ongoing bid adjustments, negative keyword pruning & A/B testing</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Australian tax invoice issued monthly (excl./incl. GST clearly stated)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                        <span>Formal Service Agreement & Fee Schedule provided prior to onboarding</span>
+                        <a href="#contact" class="text-emerald-400 hover:text-emerald-300 font-semibold">Request Fee Schedule &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process & About Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left: 4-Step Execution Process -->
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">How We Work</span>
+                    <h2 class="mt-2 font-display text-2xl sm:text-3xl font-bold text-navy-900">
+                        A Disciplined Four-Stage Campaign Workflow
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-sm sm:text-base">
+                        Every engagement follows a structured operational checklist to ensure tracking accuracy before a single dollar of media budget is spent.
+                    </p>
+
+                    <div class="mt-8 space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 font-display font-bold text-navy-900 flex items-center justify-center shrink-0">01</div>
+                            <div>
+                                <h4 class="font-display font-bold text-base text-navy-900">Account Audit & Service Area Mapping</h4>
+                                <p class="text-sm text-slate-600 mt-1">We define target suburbs, core high-margin services (repairs, installations, quotes), and competitor benchmarks across NSW or national service regions.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 font-display font-bold text-navy-900 flex items-center justify-center shrink-0">02</div>
+                            <div>
+                                <h4 class="font-display font-bold text-base text-navy-900">Conversion & Call Tracking Verification</h4>
+                                <p class="text-sm text-slate-600 mt-1">Deployment of GA4 events, Google Tag Manager, and phone call conversion tracking so quote submissions and calls are recorded accurately.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 font-display font-bold text-navy-900 flex items-center justify-center shrink-0">03</div>
+                            <div>
+                                <h4 class="font-display font-bold text-base text-navy-900">Campaign Launch & Continuous Optimisation</h4>
+                                <p class="text-sm text-slate-600 mt-1">Active management of search terms, audience targeting, ad extensions, and bidding strategies to reduce wasted spend and improve enquiry quality.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 font-display font-bold text-navy-900 flex items-center justify-center shrink-0">04</div>
+                            <div>
+                                <h4 class="font-display font-bold text-base text-navy-900">Monthly Reporting & Strategy Review</h4>
+                                <p class="text-sm text-slate-600 mt-1">Comprehensive monthly reporting outlining total leads generated, cost per enquiry, and strategic recommendations for the upcoming cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: About Company Box -->
+                <div id="about" class="lg:col-span-5 bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Corporate Profile</span>
+                    <h3 class="mt-2 font-display text-xl font-bold text-navy-900">
+                        About CAO INVESTMENT AUSTRALIA PTY LTD
+                    </h3>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed" data-i18n="aboutDesc1">
+                        Registered in New South Wales, Australia, CAO INVESTMENT AUSTRALIA PTY LTD is a specialist performance marketing consultancy focused on paid search and paid social lead generation.
+                    </p>
+                    <p class="mt-3 text-sm text-slate-600 leading-relaxed" data-i18n="aboutDesc2">
+                        Operating from Lindfield on Sydney's North Shore, we partner with established service businesses, trade contractors, and growing commercial brands to build reliable, measurable customer acquisition pipelines through Google and Meta advertising platforms.
+                    </p>
+
+                    <div class="mt-6 pt-6 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="flex justify-between gap-4">
+                            <span class="text-slate-500 shrink-0">Legal Entity:</span>
+                            <span class="font-semibold text-navy-900 text-right">CAO INVESTMENT AUSTRALIA PTY LTD</span>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <span class="text-slate-500 shrink-0">Registered Office:</span>
+                            <span class="font-semibold text-navy-900 text-right">4 Nelson Rd, Lindfield NSW 2070</span>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <span class="text-slate-500 shrink-0">ABN / ACN:</span>
+                            <span class="font-semibold text-navy-900 text-right"><span class="placeholder-tag">[Your ABN / ACN]</span></span>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <span class="text-slate-500 shrink-0">Official Domain:</span>
+                            <span class="font-semibold text-navy-900 text-right">caoinvestau.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section id="contact" class="py-20 bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Get In Touch</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold" data-i18n="contactTitle">
+                        Discuss Your Paid Advertising Strategy
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-i18n="contactDesc">
+                        Contact our Lindfield, NSW team to review your current Google or Meta advertising setup or request a tailored monthly management Fee Schedule.
+                    </p>
+
+                    <div class="space-y-4 pt-2 text-sm">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Registered & Office Address</p>
+                                <p class="text-slate-400 mt-0.5">4 Nelson Rd, Lindfield NSW 2070, Australia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Corporate Email</p>
+                                <p class="text-slate-400 mt-0.5">
+                                    <a href="mailto:info@caoinvestau.com" class="hover:text-white transition">info@caoinvestau.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Telephone (AEST/AEDT)</p>
+                                <p class="text-slate-400 mt-0.5"><span class="placeholder-tag">[+61 2 XXXX XXXX]</span> • Mon–Fri, 9:00am – 5:30pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="font-display text-lg font-bold text-navy-900">Request a Proposal & Fee Schedule</h3>
+                        <p class="text-xs text-slate-500 mt-1">Complete the details below and a senior account strategist will respond within 1 business day.</p>
+
+                        <form id="inquiry-form" class="mt-6 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="full-name" class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" id="full-name" required placeholder="e.g. David Mitchell" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900">
+                                </div>
+                                <div>
+                                    <label for="company-name" class="block text-xs font-semibold text-slate-700 mb-1">Business / Company Name *</label>
+                                    <input type="text" id="company-name" required placeholder="e.g. Sydney Trade Services Pty Ltd" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="work-email" class="block text-xs font-semibold text-slate-700 mb-1">Business Email *</label>
+                                    <input type="email" id="work-email" required placeholder="name@business.com.au" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900">
+                                </div>
+                                <div>
+                                    <label for="phone-num" class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" id="phone-num" required placeholder="04XX XXX XXX" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="service-focus" class="block text-xs font-semibold text-slate-700 mb-1">Primary Advertising Focus</label>
+                                <select id="service-focus" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-navy-900">
+                                    <option>Google Search & Local Lead Generation</option>
+                                    <option>Meta (Facebook & Instagram) Lead Campaigns</option>
+                                    <option>Full-Stack Google + Meta Management & Tracking</option>
+                                    <option>Conversion & Call Tracking Audit</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="project-notes" class="block text-xs font-semibold text-slate-700 mb-1">Service Region & Campaign Goals</label>
+                                <textarea id="project-notes" rows="3" placeholder="Briefly describe your target suburbs and services (e.g. repairs, installations, quote requests)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 px-6 rounded-lg bg-navy-900 hover:bg-navy-800 text-white font-semibold text-sm transition shadow-sm">
+                                Submit Enquiry
+                            </button>
+                        </form>
+
+                        <!-- Confirmation Message Box (Replaces alert()) -->
+                        <div id="form-success" class="hidden mt-5 p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm">
+                            <p class="font-semibold">Enquiry Received</p>
+                            <p class="text-xs mt-1 text-emerald-800">Thank you for contacting CAO INVESTMENT AUSTRALIA PTY LTD. A representative from our Lindfield NSW office will review your requirements and respond shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Compliance Footer (Essential for Bank / Lender Verification) -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800/80 text-xs">
+                <div>
+                    <p class="font-display font-bold text-white text-sm">
+                        CAO INVESTMENT AUSTRALIA PTY LTD
+                    </p>
+                    <p class="mt-2 leading-relaxed">
+                        Performance Paid Advertising & Digital Lead Generation Consultancy operating in New South Wales, Australia.
+                    </p>
+                    <p class="mt-2 text-slate-500">Website: https://caoinvestau.com</p>
+                </div>
+                <div class="space-y-1.5">
+                    <p class="font-semibold text-slate-200">Australian Corporate Registration</p>
+                    <p>ABN / ACN: <span class="placeholder-tag">[Your ABN / ACN]</span></p>
+                    <p>Registered Office: 4 Nelson Rd, Lindfield NSW 2070, Australia</p>
+                    <p>Enquiries: <a href="mailto:info@caoinvestau.com" class="hover:text-white underline">info@caoinvestau.com</a></p>
+                </div>
+                <div class="space-y-1.5">
+                    <p class="font-semibold text-slate-200">Compliance & Legal</p>
+                    <p>
+                        <button type="button" onclick="openLegalModal('privacy')" class="hover:text-white underline transition">
+                            Privacy Policy (Australian Privacy Principles)
+                        </button>
+                    </p>
+                    <p>
+                        <button type="button" onclick="openLegalModal('terms')" class="hover:text-white underline transition">
+                            Standard Website Terms of Use
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; <span id="year"></span> CAO INVESTMENT AUSTRALIA PTY LTD. All rights reserved.</p>
+                <p>Google Ads and Meta are trademarks of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Modal (Privacy Policy & Terms) -->
+    <div id="legal-modal" class="hidden fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                <h3 id="modal-title" class="font-display font-bold text-lg text-navy-900">Privacy Policy</h3>
+                <button type="button" onclick="closeLegalModal()" class="p-1.5 rounded-lg text-slate-500 hover:bg-slate-100">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="modal-body" class="p-6 overflow-y-auto text-xs sm:text-sm text-slate-600 space-y-3 leading-relaxed">
+                <!-- Populated dynamically -->
+            </div>
+            <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 text-right">
+                <button type="button" onclick="closeLegalModal()" class="px-4 py-2 rounded-lg bg-navy-900 text-white text-xs font-semibold hover:bg-navy-800">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discreet Owner Setup Guide Banner (Dismissible) -->
+    <div id="owner-tip" class="fixed bottom-4 right-4 z-40 max-w-sm bg-navy-900 text-white border border-slate-700 rounded-xl p-4 shadow-2xl text-xs">
+        <div class="flex items-start justify-between gap-3">
+            <div>
+                <p class="font-semibold text-amber-400">上线前最后核对 (Final Check)</p>
+                <p class="text-slate-300 mt-1 leading-relaxed">
+                    公司名 <strong>CAO INVESTMENT AUSTRALIA PTY LTD</strong>、域名 <strong>caoinvestau.com</strong> 及地址 <strong>4 Nelson Rd, Lindfield NSW 2070</strong> 已全部更新。上线前只需填入您的真实 <span class="text-amber-300 font-mono">[ABN / ACN]</span> 及电话即可。
+                </p>
+            </div>
+            <button type="button" onclick="document.getElementById('owner-tip').remove()" class="text-slate-400 hover:text-white shrink-0" aria-label="Dismiss tip">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Set current year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Bilingual EN / CN Toggle for key headings & descriptions
+        const translations = {
+            en: {
+                topLocation: "Lindfield, NSW Based Performance Agency",
+                navServices: "Services",
+                navFee: "Management Model",
+                navProcess: "Tracking & ROI",
+                navAbout: "About Us",
+                navCta: "Request Consultation",
+                heroBadge: "Google Ads & Meta Paid Media Specialists • New South Wales",
+                heroTitle: "High-Intent Paid Advertising for Australian Service, Repair & Installation Brands.",
+                heroDesc: "We manage end-to-end Google and Meta advertising campaigns—combining targeted acquisition strategy, continuous bid optimisation, and granular lead tracking to generate qualified repair, installation, and quote enquiries.",
+                heroBtnPrimary: "Book a Discovery Call",
+                heroBtnSecondary: "View Transparent Fee Model",
+                servicesTitle: "Structured Paid Media Management Built for Measurable Enquiries",
+                servicesDesc: "We focus exclusively on performance channels that drive commercial enquiries—helping repair, installation, and trade service businesses turn ad spend into booked jobs.",
+                aboutDesc1: "Registered in New South Wales, Australia, CAO INVESTMENT AUSTRALIA PTY LTD is a specialist performance marketing consultancy focused on paid search and paid social lead generation.",
+                aboutDesc2: "Operating from Lindfield on Sydney's North Shore, we partner with established service businesses, trade contractors, and growing commercial brands to build reliable, measurable customer acquisition pipelines through Google and Meta advertising platforms.",
+                contactTitle: "Discuss Your Paid Advertising Strategy",
+                contactDesc: "Contact our Lindfield, NSW team to review your current Google or Meta advertising setup or request a tailored monthly management Fee Schedule."
+            },
+            cn: {
+                topLocation: "立足悉尼 Lindfield, NSW 的效果广告代运营机构",
+                navServices: "核心服务",
+                navFee: "收费与账户模式",
+                navProcess: "追踪与回报",
+                navAbout: "关于我们",
+                navCta: "预约商业咨询",
+                heroBadge: "Google Ads 与 Meta 付费广告专家 • 澳大利亚新南威尔士州",
+                heroTitle: "专为澳洲本地维修、安装及估价类服务品牌打造的高转化付费广告方案。",
+                heroDesc: "我们提供 Google 与 Meta 平台全流程付费广告代运营——涵盖精准投放策略、持续出价优化与全链路线索追踪，帮助企业稳定获取高质量维修、安装与上门估价咨询。",
+                heroBtnPrimary: "预约方案沟通",
+                heroBtnSecondary: "查看透明收费模式",
+                servicesTitle: "以真实商业咨询结果为导向的付费广告管理",
+                servicesDesc: "我们专注于能直接带来客户咨询的效果广告渠道——助力本地维修、工程安装及专业服务商将广告预算转化为实际订单。",
+                aboutDesc1: "CAO INVESTMENT AUSTRALIA PTY LTD 注册于澳大利亚新南威尔士州（NSW），是一家专注于搜索引擎与社交媒体付费获客的效果营销咨询公司。",
+                aboutDesc2: "公司位于悉尼北岸 Lindfield，致力于与本地成熟服务企业、工程承包商及成长型商业品牌合作，通过 Google 和 Meta 广告平台搭建可量化、可持续的客户获取体系。",
+                contactTitle: "咨询您的付费广告增长策略",
+                contactDesc: "欢迎联系我们位于悉尼 Lindfield 的团队，评估您当前的 Google 或 Meta 广告账户表现，或索取定制化月度管理报价单（Fee Schedule）。"
+            }
+        };
+
+        let currentLang = 'en';
+        const langToggleBtn = document.getElementById('lang-toggle');
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'cn' : 'en';
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Handler (No alert() used)
+        const inquiryForm = document.getElementById('inquiry-form');
+        const formSuccess = document.getElementById('form-success');
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            inquiryForm.reset();
+        });
+
+        // Legal Modal Content (Australian Compliance)
+        const legalModal = document.getElementById('legal-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openLegalModal(type) {
+            if (type === 'privacy') {
+                modalTitle.textContent = 'Privacy Policy (Australia)';
+                modalBody.innerHTML = `
+                    <p><strong>1. Overview:</strong> CAO INVESTMENT AUSTRALIA PTY LTD (Registered Office: 4 Nelson Rd, Lindfield NSW 2070) is committed to protecting your privacy in accordance with the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988 (Cth)</em>.</p>
+                    <p><strong>2. Information We Collect:</strong> We collect business contact details voluntarily submitted via our consultation forms on caoinvestau.com, including your name, company name, business email address, telephone number, and campaign requirements.</p>
+                    <p><strong>3. Use of Information:</strong> Information collected is used strictly to respond to commercial enquiries, prepare Fee Schedules, and deliver contracted paid media management services.</p>
+                    <p><strong>4. Contact & Access:</strong> To request access to or correction of your personal information, please contact our Privacy Officer at <a href="mailto:info@caoinvestau.com" class="underline text-navy-900">info@caoinvestau.com</a>.</p>
+                `;
+            } else {
+                modalTitle.textContent = 'Standard Website Terms of Use';
+                modalBody.innerHTML = `
+                    <p><strong>1. Acceptance of Terms:</strong> This website (caoinvestau.com) is operated by CAO INVESTMENT AUSTRALIA PTY LTD, registered in New South Wales, Australia.</p>
+                    <p><strong>2. Commercial Engagements:</strong> All paid advertising management services are governed by a separate written Service Agreement and Fee Schedule executed between CAO INVESTMENT AUSTRALIA PTY LTD and the client.</p>
+                    <p><strong>3. Governing Law:</strong> These terms are governed by and construed in accordance with the laws of New South Wales, Australia.</p>
+                `;
+            }
+            legalModal.classList.remove('hidden');
+        }
+
+        function closeLegalModal() {
+            legalModal.classList.add('hidden');
+        }
+
+        // Close modal on outside click
+        legalModal.addEventListener('click', (e) => {
+            if (e.target === legalModal) {
+                closeLegalModal();
+            }
+        });
+    </script>
+</body>
+</html>
